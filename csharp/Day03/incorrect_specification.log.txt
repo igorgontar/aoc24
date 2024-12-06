@@ -1,6 +1,11 @@
 -------------------------------------------------------------------
 This proves that description of the problem is incorrect:
-only resent don't() applies, not recent do() 
+**not the resent do()/don't() applies, but the very first occurance**
+once it is turned on or off it continues in that mode until the oppoisite mode is turned 
+The original description would have a logical problem with the input data, where the do() is the first
+command after start (where it is turned on by defaul)
+i.e. bla bla on().
+How can only recent on() applie, if it is alredy turned on from the beginning
 -------------------------------------------------------------------
 WRN          194 K        0.00 ms  0  === AoC 2024 Day03 ===
 PRF          213 K        0.00 ms  0 +Puzzle1()
