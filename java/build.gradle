@@ -1,0 +1,41 @@
+plugins {
+    id 'java'  
+    id 'application'  
+}
+
+ext {
+   javaMainClass = "aoc24.day1.Main"
+}
+
+jar {
+    manifest {
+        attributes(
+            "Main-Class": javaMainClass
+        )
+    }
+}
+
+task 'hello' {
+    doLast {
+        println "Hello from Gradle!"
+    }
+}
+
+application {
+    mainClassName = javaMainClass
+
+}
+
+task exec (type: JavaExec) {
+    group = "Execution"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = javaMainClass
+}
+
+task execjar(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get()
+}

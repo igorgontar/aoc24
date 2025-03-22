@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "make",
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": "aoc24.day1.Main",
+            "cwd": "${workspaceFolder}/src/main/java/aoc24/day1"
+        },
+    ]
+}
